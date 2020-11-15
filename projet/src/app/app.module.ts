@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { SalleComponent } from './salle/salle.component';
 import { ControllerSalleComponent } from './controller-salle/controller-salle.component';
 import { PosteComponent } from './poste/poste.component';
+import { DetailsPosteComponent } from './details-poste/details-poste.component';
 
 
 const appRoutes:Routes=[
@@ -36,7 +37,8 @@ const appRoutes:Routes=[
     AppComponent,
     SalleComponent,
     ControllerSalleComponent,
-    PosteComponent
+    PosteComponent,
+    DetailsPosteComponent
   ],
   imports: [
     BrowserModule,
