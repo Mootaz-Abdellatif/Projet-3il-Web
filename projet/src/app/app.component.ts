@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 
+// @ts-ignore
 @Component({
-  selector: 'app-root',
+  selector: 'app-root' ,
   template:`
-  
+
   <app-header></app-header>
 
-  
+
   <app-home></app-home>
 
 

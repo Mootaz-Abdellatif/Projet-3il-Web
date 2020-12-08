@@ -19,26 +19,26 @@
     <!-- /.content-header -->
 
  <!-- Main content -->
- <section class="content">
-    <div class="container-fluid">
-      <div class="row" >
-        <div class="col-lg-3 col-6" *ngFor="let salle of salles">
-          <!-- small box -->
-          <div class="small-box bg-gradient-lightblue" >
-            <div class="inner">
-              <h3>S {{salle.numero}}</h3>
+   <section class="content">
+     <div class="container-fluid">
+       <div class="row" >
+         <div class="col-lg-3 col-6" *ngFor="let salle of salles">
+           <!-- small box -->
+           <div class="small-box bg-gradient-lightblue" >
+             <div class="inner">
+               <h3> {{salle.numero_Salle}}</h3>
 
-              <p>{{salle.infos}}</p>
-            </div>
-            <div class="icon">
-              <i class="ion ion-bag"></i>
-            </div>
-            <a routerLink="/postes/{{salle.numero}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
- </section>
+               <p>{{salle.nombre_Postes}}</p>
+             </div>
+             <div class="icon">
+               <i class="ion ion-bag"></i>
+             </div>
+             <a routerLink="/postes/{{salle.id_Salle}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+           </div>
+         </div>
+       </div>
+     </div>
+   </section>
 
   <!-- /.content -->
 </div>

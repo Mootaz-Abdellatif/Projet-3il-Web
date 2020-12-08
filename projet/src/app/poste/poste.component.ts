@@ -1,60 +1,61 @@
 import {Component,  OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
+import {Poste} from '../Classes/poste';
+import {PosteService} from '../Services/PosteService/poste.service';
+import {Materiel} from '../Classes/materiel';
+import {MaterielService} from '../Services/MaterielService/materiel.service';
 
+
+// @ts-ignore
 @Component({
   selector: 'app-poste',
   templateUrl: './poste.component.html',
   styleUrls: ['./poste.component.css']
 })
+
 export class PosteComponent implements OnInit {
 
-  postes: any;
+  id_Salle: number;
+  id_Poste: bigint;
+  etat = '';
+  materiels: Materiel[];
+
+  postes: Poste[];
 
   data = '';
-  constructor(private router: ActivatedRoute) {
-    this.postes = [
-      {
-        numero: '1'
-      },
-      {
-        numero: '2'
-      },
-      {
-        numero: '3'
-      },
-      {
-        numero: '4'
-      },
-      {
-        numero: '5'
-      },
-      {
-        numero: '6'
-      },
-      {
-        numero: '7'
-      },
-      {
-        numero: '8'
-      },
-      {
-        numero: '9'
-      },
-      {
-        numero: '10'
-      },
-      {
-        numero: '11'
-      },
-      {
-        numero: '12'
-      }
-];
+
+  constructor(private posteService: PosteService, private materielService: MaterielService ,private router: Router,private route: ActivatedRoute) {}
+
+  ngOnInit() {
+
+    this.id_Salle = this.route.snapshot.params.salle_id_salle;
+    this.data = this.route.snapshot.params.salle_id_salle;
+    console.log('mmmmmmmmmmmmmmm');
+     console.log(this.data);
+    console.log(this.id_Salle);
+
+    this.posteService.getPostes(this.id_Salle)
+        .subscribe(value => {
+          console.log(value);
+          this.postes=value;
+          //   console.log("3asba");
+          // value.forEach(x => {
+          //     this.materielService.getMaterielList(x.id_Poste)
+          //         .subscribe(value1 => {
+          //             console.log(x.id_Poste);
+          //             console.log(value1);
+          //             this.materiels=value1;
+          //         });
+          //
+          //
+          // })
+        }, error => console.log(error))
+
+
   }
 
-  ngOnInit(): void {
-    console.log(this.router.snapshot.params);
-    this.data = this.router.snapshot.params.id;
-  }
+
+
+
 
 }

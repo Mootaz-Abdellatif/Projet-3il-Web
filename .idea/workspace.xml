@@ -19,7 +19,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="163b025e-9afe-4292-a974-2e3b7b35ec41" name="Default Changelist" comment="" />
+    <list default="true" id="163b025e-9afe-4292-a974-2e3b7b35ec41" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet/src/app/Services/SalleService/salle.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/projet/src/app/Services/SalleService/salle.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Projet-3il-Web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Projet-3il-Web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projet/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projet/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projet/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet/src/app/controller-salle/controller-salle.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projet/src/app/controller-salle/controller-salle.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet/src/app/controller-salle/controller-salle.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projet/src/app/controller-salle/controller-salle.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet/src/app/poste/poste.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/projet/src/app/poste/poste.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet/src/app/poste/poste.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projet/src/app/poste/poste.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projet/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projet/src/main.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +44,13 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,9 +72,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/projet/src/app/Services/PosteService" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -58,19 +83,52 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\Users\moota\Documents\GitHub\Projet-3il-Web\projet\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projets\AngularProjet\projet\src\app\Services\SalleService" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projets\AngularProjet\projet\src\app\Services\PosteService" />
+      <recent name="C:\Projets\AngularProjet\projet\src\app\Services" />
+      <recent name="C:\Projets\AngularProjet\projet\src\app\Classes" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="E2E Tests (projet)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/projet/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/projet/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
     </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -83,6 +141,7 @@
       <updated>1603985564628</updated>
       <workItem from="1603985567079" duration="2537000" />
       <workItem from="1605359196516" duration="20773000" />
+      <workItem from="1607359205107" duration="36296000" />
     </task>
     <servers />
   </component>
@@ -102,6 +161,34 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="551" y="275" key="#TSLint" timestamp="1607363683001">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="551" y="275" key="#TSLint/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1607363683001" />
+    <state x="446" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607434602366">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="446" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1607434602366" />
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1607428159614">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1607428159614" />
+    <state width="1323" height="134" key="GridCell.Tab.0.bottom" timestamp="1607449805381">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="134" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1607449805381" />
+    <state width="1323" height="134" key="GridCell.Tab.0.center" timestamp="1607449805381">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="134" key="GridCell.Tab.0.center/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1607449805381" />
+    <state width="1323" height="134" key="GridCell.Tab.0.left" timestamp="1607449805380">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="134" key="GridCell.Tab.0.left/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1607449805380" />
+    <state width="1323" height="134" key="GridCell.Tab.0.right" timestamp="1607449805381">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="134" key="GridCell.Tab.0.right/0.0.1366.728/1366.0.1280.680@0.0.1366.728" timestamp="1607449805381" />
     <state x="3" y="155" key="run.anything.popup" timestamp="1605366938862">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

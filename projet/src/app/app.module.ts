@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,24 +10,28 @@ import { SalleComponent } from './salle/salle.component';
 import { ControllerSalleComponent } from './controller-salle/controller-salle.component';
 import { PosteComponent } from './poste/poste.component';
 import { DetailsPosteComponent } from './details-poste/details-poste.component';
+import {HttpClientModule} from '@angular/common/http';
+import {SalleService} from './Services/SalleService/salle.service';
+import {PosteService} from './Services/PosteService/poste.service';
 
 
-const appRoutes:Routes=[
+const appRoutes: Routes = [
   {
-    path:'salle',component:SalleComponent
+    path: 'salle', component: SalleComponent
   },
   {
-    path:'control',component:ControllerSalleComponent
+    path: 'control', component: ControllerSalleComponent
   },
   {
-    path:'poste',component:PosteComponent
+    path: 'poste', component: PosteComponent
   },
   {
-    path:'home',component:HomeComponent
+    path: 'home', component: HomeComponent
   }
-]
+  ];
 
 
+// @ts-ignore
 @NgModule({
   declarations: [
     FooterComponent,
@@ -43,9 +46,10 @@ const appRoutes:Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [SalleService, PosteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

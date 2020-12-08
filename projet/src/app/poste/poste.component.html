@@ -4,12 +4,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">S {{data}} </h1>
+            <h1 class="m-0 text-dark">S {{data}}</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">S {{data}}</li>
+              <li class="breadcrumb-item active">S</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -28,8 +28,15 @@
               <span class="info-box-icon bg-info elevation-1"><i class="fas fa-users"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text"><a href="#" class="small-box-footer">Poste</a></span>
-                <span class="info-box-number">{{poste.numero}}</span>
+                <span class="info-box-text"><a href="#" class="small-box-footer">Poste {{poste.adresse_IP}}</a></span>
+                <span class="info-box-number">{{poste.id_Poste}}</span>
+
+<!--                <span class="info-box-text" *ngFor="let materiel of poste.materiels">-->
+<!--                  {{materiel.nom}}</span>-->
+                <div *ngFor="let materiel of poste.materiels">
+                <span class="info-box-text text-primary"*ngIf="materiel.etat == 0 ">
+                  {{materiel.nom}} non détecté </span>
+                </div>
               </div>
               <!-- /.info-box-content -->
 
