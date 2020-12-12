@@ -16,44 +16,58 @@ import {MaterielService} from '../Services/MaterielService/materiel.service';
 export class PosteComponent implements OnInit {
 
   id_Salle: number;
-  id_Poste: bigint;
+  id_Poste: number;
   etat = '';
-  materiels: Materiel[];
-
+  filter = '';
   postes: Poste[];
 
   data = '';
+  numero_salle ='';
+
 
   constructor(private posteService: PosteService, private materielService: MaterielService ,private router: Router,private route: ActivatedRoute) {}
 
   ngOnInit() {
-
     this.id_Salle = this.route.snapshot.params.salle_id_salle;
     this.data = this.route.snapshot.params.salle_id_salle;
-    console.log('mmmmmmmmmmmmmmm');
-     console.log(this.data);
-    console.log(this.id_Salle);
+    this.numero_salle = this.route.snapshot.params.numero_Salle;
+    //this.id_Poste=
 
     this.posteService.getPostes(this.id_Salle)
         .subscribe(value => {
           console.log(value);
           this.postes=value;
-          //   console.log("3asba");
-          // value.forEach(x => {
-          //     this.materielService.getMaterielList(x.id_Poste)
-          //         .subscribe(value1 => {
-          //             console.log(x.id_Poste);
-          //             console.log(value1);
-          //             this.materiels=value1;
-          //         });
-          //
-          //
-          // })
         }, error => console.log(error))
 
+    // @ts-ignore
 
   }
 
+  Start(id_poste){
+
+    this.posteService.startPoste(id_poste)
+      .subscribe(value => {
+        console.log(value);
+      });
+    console.log(this.posteService.startPoste(id_poste));
+
+
+  }
+  StartAll(id_Salle){
+    this.posteService.startAllPostes(id_Salle)
+      .subscribe( value => {
+        console.log(value);
+      })
+
+  }
+
+  testSalle(id_Salle){
+    this.posteService.testSalle(id_Salle)
+      .subscribe(value => {
+        console.log(value);
+
+      })
+  }
 
 
 

@@ -14,7 +14,7 @@ const routes: Routes = [
     path: 'control', component: ControllerSalleComponent
   },
   {
-    path: 'postes/:salle_id_salle', component: PosteComponent
+    path: 'postes/:salle_id_salle/:numero_Salle', component: PosteComponent
   },
 
   {

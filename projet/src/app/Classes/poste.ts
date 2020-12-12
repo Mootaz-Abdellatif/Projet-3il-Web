@@ -7,4 +7,6 @@ adresse_Mac: String;
 // @ts-ignore
 materiels: Materiel[];
 //salle_id_salle: bigint;
+etat: number;
+
 }

@@ -5,7 +5,11 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Control et Sécurité </h1>
+            <h1 class="m-0 text-dark">Control et Sécurité
+
+            </h1>
+
+            <app-uploadFile></app-uploadFile>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -21,24 +25,28 @@
  <!-- Main content -->
    <section class="content">
      <div class="container-fluid">
+
        <div class="row" >
+
          <div class="col-lg-3 col-6" *ngFor="let salle of salles">
            <!-- small box -->
            <div class="small-box bg-gradient-lightblue" >
-             <div class="inner">
-               <h3> {{salle.numero_Salle}}</h3>
 
-               <p>{{salle.nombre_Postes}}</p>
+             <div class="inner">
+               <i class='fas fa-door-open' style='font-size:36px'></i><h3> Salle {{salle.numero_Salle}}</h3>
+
+               <p>18 Postes</p>
              </div>
              <div class="icon">
                <i class="ion ion-bag"></i>
              </div>
-             <a routerLink="/postes/{{salle.id_Salle}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+             <a routerLink="/postes/{{salle.id_Salle}}/{{salle.numero_Salle}}" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
            </div>
          </div>
        </div>
      </div>
    </section>
+   <script src="../../assets/static/js/main.js" ></script>
 
   <!-- /.content -->
 </div>

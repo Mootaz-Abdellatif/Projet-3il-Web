@@ -3,8 +3,26 @@
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0 text-dark">S {{data}}</h1>
+          <div class="col-sm-5">
+            <h1 class="m-0 text-dark" style="margin-bottom: 5%">S {{numero_salle}}
+              <button type="button" class="btn btn-primary mr-2" (click)="testSalle(id_Salle)">Détecter</button>
+
+              <button type="button" class="btn btn-success" (click)="StartAll(id_Salle)">Démarrer les postes</button>
+
+
+            </h1>
+<!--            <span>Pour mettre à jour les données:</span>-->
+<!--            <div class="input-group " >-->
+<!--              <div class="input-group-prepend">-->
+<!--                <span class="input-group-text" id="inputGroupFileAddon01" (click)="update()">Upload</span>-->
+<!--              </div>-->
+<!--              <div class="custom-file">-->
+<!--                <input type="file" class="custom-file-input" id="inputGroupFile01"-->
+<!--                       aria-describedby="inputGroupFileAddon01">-->
+<!--                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>-->
+<!--              </div>-->
+<!--            </div>-->
+
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -21,27 +39,40 @@
     <section class="content">
       <div class="container-fluid">
         <!-- Info boxes -->
-
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <div class="row">
-          <div class="col-12 col-sm-6 col-md-3" *ngFor="let poste of postes">
+          <div  style="margin-bottom: 5%" class="col-12 col-sm-6 col-md-3" *ngFor="let poste of postes; let i = index">
             <div class="info-box">
-              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-users"></i></span>
+              <span class="info-box-icon bg-info elevation-1"><i class="material-icons" style="font-size:36px">devices</i>
+</span>
 
               <div class="info-box-content">
-                <span class="info-box-text"><a href="#" class="small-box-footer">Poste {{poste.adresse_IP}}</a></span>
-                <span class="info-box-number">{{poste.id_Poste}}</span>
-
-<!--                <span class="info-box-text" *ngFor="let materiel of poste.materiels">-->
-<!--                  {{materiel.nom}}</span>-->
+                <span class="info-box-text text-blue text-bold"> Poste N° {{i+1}}</span>
                 <div *ngFor="let materiel of poste.materiels">
-                <span class="info-box-text text-primary"*ngIf="materiel.etat == 0 ">
-                  {{materiel.nom}} non détecté </span>
+                <div  *ngIf="!materiel.etat">
+
+                  <i class="material-icons" style="font-size:20px;color:red">error_outline</i>
+                  <span class="info-box-text text-red">{{materiel.nom}} non détecté </span>
+
+
                 </div>
+
+<!--                  <ng-template #c>-->
+<!--                    <span class="info-box-text text-green"> Tous les matériels sont détectés </span>-->
+<!--                  </ng-template>-->
+                </div>
+                <div style="margin-top: 5%" *ngIf="!poste.etat">
+                  <button (click)="Start(poste.id_Poste)" type="button" class="btn btn-danger mr-2">Démarrer</button>
+                </div>
+
               </div>
               <!-- /.info-box-content -->
 
             </div>
             <!-- /.info-box -->
+
+
           </div>
           <!-- /.col -->
 

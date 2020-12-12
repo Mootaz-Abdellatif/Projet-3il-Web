@@ -13,6 +13,8 @@ import { DetailsPosteComponent } from './details-poste/details-poste.component';
 import {HttpClientModule} from '@angular/common/http';
 import {SalleService} from './Services/SalleService/salle.service';
 import {PosteService} from './Services/PosteService/poste.service';
+import {UploadFilesComponent} from './uploadFile/UploadFiles.component';
+import {UploadFileService} from './Services/FileService/UploadFile.service';
 
 
 const appRoutes: Routes = [
@@ -41,7 +43,8 @@ const appRoutes: Routes = [
     SalleComponent,
     ControllerSalleComponent,
     PosteComponent,
-    DetailsPosteComponent
+    DetailsPosteComponent,
+    UploadFilesComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +52,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [SalleService, PosteService],
+  providers: [SalleService, PosteService,UploadFileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
