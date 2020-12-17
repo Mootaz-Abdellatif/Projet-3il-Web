@@ -1,15 +1,16 @@
 <div class="content-wrapper" style="min-height: 496px;">
     <!-- Content Header (Page header) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-5">
-            <h1 class="m-0 text-dark" style="margin-bottom: 5%">S {{numero_salle}}
+          <div class="col-sm-7">
+            <h1 class="m-0 text-dark" style="margin-bottom: 5%">Salle {{numero_salle}}
               <button type="button" class="btn btn-primary mr-2" (click)="testSalle(id_Salle)">Détecter</button>
-
-              <button type="button" class="btn btn-success" (click)="StartAll(id_Salle)">Démarrer les postes</button>
-
-
+              <button type="button" class="btn btn-success mr-2" (click)="StartAll(id_Salle)">Démarrer les postes</button>
+              <button type="button" class="btn btn-secondary" (click)="refresh()">Refresh  <span class="glyphicon glyphicon-refresh"></span></button>
             </h1>
 <!--            <span>Pour mettre à jour les données:</span>-->
 <!--            <div class="input-group " >-->
@@ -24,10 +25,10 @@
 <!--            </div>-->
 
           </div><!-- /.col -->
-          <div class="col-sm-6">
+          <div class="col-sm-4">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">S</li>
+              <li class="breadcrumb-item"><a href="/control">Home</a></li>
+              <li class="breadcrumb-item active">S {{data}}</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -57,10 +58,6 @@
 
 
                 </div>
-
-<!--                  <ng-template #c>-->
-<!--                    <span class="info-box-text text-green"> Tous les matériels sont détectés </span>-->
-<!--                  </ng-template>-->
                 </div>
                 <div style="margin-top: 5%" *ngIf="!poste.etat">
                   <button (click)="Start(poste.id_Poste)" type="button" class="btn btn-danger mr-2">Démarrer</button>

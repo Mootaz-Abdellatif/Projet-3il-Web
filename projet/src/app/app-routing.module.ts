@@ -19,7 +19,8 @@ const routes: Routes = [
 
   {
     path: 'home', component: HomeComponent
-  }
+  },
+  { path: '',   redirectTo: '/control', pathMatch: 'full' }
 ];
 
 // @ts-ignore

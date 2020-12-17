@@ -20,4 +20,5 @@ export class MaterielService {
   public getMaterielList(id_Poste: bigint): Observable<Materiel[]>{
     return this.httpClient.get<Materiel[]>(`${this.baseURL}/${id_Poste}`);
   }
+
 }

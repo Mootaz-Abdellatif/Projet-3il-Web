@@ -20,6 +20,7 @@ export class PosteComponent implements OnInit {
   etat = '';
   filter = '';
   postes: Poste[];
+  materiels: Materiel[];
 
   data = '';
   numero_salle ='';
@@ -31,7 +32,7 @@ export class PosteComponent implements OnInit {
     this.id_Salle = this.route.snapshot.params.salle_id_salle;
     this.data = this.route.snapshot.params.salle_id_salle;
     this.numero_salle = this.route.snapshot.params.numero_Salle;
-    //this.id_Poste=
+
 
     this.posteService.getPostes(this.id_Salle)
         .subscribe(value => {
@@ -39,7 +40,7 @@ export class PosteComponent implements OnInit {
           this.postes=value;
         }, error => console.log(error))
 
-    // @ts-ignore
+
 
   }
 
@@ -69,6 +70,9 @@ export class PosteComponent implements OnInit {
       })
   }
 
+  refresh(): void {
+    window.location.reload();
+  }
 
 
 
